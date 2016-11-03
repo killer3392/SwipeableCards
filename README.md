@@ -3,4 +3,4 @@
 
 项目是用Swift写的，不描述了，直接上效果吧：
 
-![image](https://github.com/DepponMain/SwipeableCards/xiChuangZhu.gif)
+(https://github.com/DepponMain/SwipeableCards/xiChuangZhu.gif)
