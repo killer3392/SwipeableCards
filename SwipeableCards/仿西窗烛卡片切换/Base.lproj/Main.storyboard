@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="仿西窗烛卡片切换" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="偏移" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jjf-JW-0qJ">
+                                <rect key="frame" x="16" y="30" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="卡片数量" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ubw-Aj-WEe">
+                                <rect key="frame" x="16" y="79" width="70" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fsw-wB-Fvi">
+                                <rect key="frame" x="66" y="26" width="294" height="29"/>
+                                <segments>
+                                    <segment title="(5,5)"/>
+                                    <segment title="(0,5)"/>
+                                    <segment title="(-5,5)"/>
+                                    <segment title="(-5,-5)"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changeOffset:" destination="BYZ-38-t0r" eventType="valueChanged" id="xsc-iY-0Hr"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cW4-eT-FpH">
+                                <rect key="frame" x="101" y="75" width="259" height="29"/>
+                                <segments>
+                                    <segment title="3"/>
+                                    <segment title="2"/>
+                                    <segment title="5"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changeNumber:" destination="BYZ-38-t0r" eventType="valueChanged" id="DH0-Gm-Ro5"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xa6-qX-laG" customClass="SwipeableCards" customModule="仿西窗烛卡片切换" customModuleProvider="target">
+                                <rect key="frame" x="51" y="156" width="273" height="355"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="273" id="66T-tO-eo3"/>
+                                    <constraint firstAttribute="height" constant="355" id="OUO-IQ-BQo"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fsw-wB-Fvi" firstAttribute="leading" secondItem="Jjf-JW-0qJ" secondAttribute="trailing" constant="15" id="3ev-2t-ikl"/>
+                            <constraint firstItem="fsw-wB-Fvi" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="26" id="8lM-tm-D9r"/>
+                            <constraint firstAttribute="trailing" secondItem="fsw-wB-Fvi" secondAttribute="trailing" constant="15" id="CWE-AX-TrF"/>
+                            <constraint firstItem="Xa6-qX-laG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="MWe-0J-Pc8"/>
+                            <constraint firstItem="cW4-eT-FpH" firstAttribute="centerY" secondItem="ubw-Aj-WEe" secondAttribute="centerY" id="PvJ-96-6eu"/>
+                            <constraint firstItem="Xa6-qX-laG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ybg-TI-6KZ"/>
+                            <constraint firstItem="Jjf-JW-0qJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="en0-te-FmH"/>
+                            <constraint firstAttribute="trailing" secondItem="cW4-eT-FpH" secondAttribute="trailing" constant="15" id="f4w-oS-IU1"/>
+                            <constraint firstItem="ubw-Aj-WEe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="ghe-Gz-GrL"/>
+                            <constraint firstItem="Jjf-JW-0qJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="jNk-VD-PMj"/>
+                            <constraint firstItem="ubw-Aj-WEe" firstAttribute="top" secondItem="fsw-wB-Fvi" secondAttribute="bottom" constant="25" id="vB1-Dl-T5u"/>
+                            <constraint firstItem="cW4-eT-FpH" firstAttribute="leading" secondItem="ubw-Aj-WEe" secondAttribute="trailing" constant="15" id="vwB-gf-5Y3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cards" destination="Xa6-qX-laG" id="3pF-Wm-gzw"/>
+                        <outlet property="cardsHeight" destination="OUO-IQ-BQo" id="hCz-Bg-jTZ"/>
+                        <outlet property="cardsWidth" destination="66T-tO-eo3" id="qME-hm-tzz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137" y="99"/>
+        </scene>
+    </scenes>
+</document>
