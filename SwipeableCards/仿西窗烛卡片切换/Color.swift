@@ -1,5 +1,5 @@
 //
-//  SwipeableCards.swift
+//  Color.swift
 //  仿西窗烛卡片切换
 //
 //  Created by 马海江 on 16/11/3.
