@@ -1,9 +1,9 @@
 //
-//  Color.swift
-//  iOSBaseProject
+//  SwipeableCards.swift
+//  仿西窗烛卡片切换
 //
-//  Created by admin on 16/5/19.
-//  Copyright © 2016年 Ding. All rights reserved.
+//  Created by 马海江 on 16/11/3.
+//  Copyright © 2016年 Ma. All rights reserved.
 //
 
 import UIKit
